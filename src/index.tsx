@@ -342,6 +342,7 @@ const ReactImagePickerEditor = memo(({ config = {}, imageSrcProp = '', color = '
         >
           {!configuration.hideAddBtn &&
             <button
+                type={'button'}
               className="icon-btn"
               id="upload-img"
               title={labels['Upload a image']}
@@ -353,6 +354,7 @@ const ReactImagePickerEditor = memo(({ config = {}, imageSrcProp = '', color = '
 
           {!configuration.hideEditBtn &&
             <button
+                type={'button'}
               className="icon-btn"
               id="edit-img"
               title={labels['Open the editor panel']}
@@ -372,7 +374,7 @@ const ReactImagePickerEditor = memo(({ config = {}, imageSrcProp = '', color = '
           }
 
           {!configuration.hideDeleteBtn &&
-            <button className="icon-btn" id="delete-img" title={labels['Remove']} onClick={() => onRemove()} >
+            <button className="icon-btn" type={'button'} id="delete-img" title={labels['Remove']} onClick={() => onRemove()} >
               <span className="material-icons">delete</span>
             </button>
           }
